@@ -15,7 +15,7 @@ import java.nio.charset.StandardCharsets;
 public class GeocodingService { // Class for converting addresses to coordinates
 //    private static final String API_KEY;
 
-    public static String getCoordinates(String address) throws Exception {  //method for get coordinates of address
+    public static String getCoordinates(String address) throws Exception {  //method for getting coordinates of address
         String url = "https://maps.googleapis.com/maps/api/geocode/json?address=" +
                 URLEncoder.encode(address, StandardCharsets.UTF_8) + "&key=" + readApiKey();
 
