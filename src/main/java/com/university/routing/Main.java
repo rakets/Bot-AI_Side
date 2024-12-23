@@ -29,7 +29,7 @@ public class Main {
             }
         }
         System.out.println(adress);
-        
+
         try {
             int distance = DistanceMatrixService.getDistance(adress.get(0), adress.get(1));
             System.out.println("Distance (meters): " + distance);
