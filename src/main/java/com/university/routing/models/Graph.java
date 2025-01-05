@@ -29,8 +29,6 @@ public class Graph {    //Сlass for representing a graph
 
     @Override
     public String toString() {
-        return "Graph{" +
-                "adjacencyList=" + adjacencyList +
-                '}';
+        return "Graph : " + adjacencyList;
     }
 }
