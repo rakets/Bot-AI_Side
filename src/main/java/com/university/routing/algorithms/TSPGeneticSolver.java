@@ -54,44 +54,6 @@ public class TSPGeneticSolver {
         Map<List<String>, Integer> finalFitness = evaluateFitness(graph, population);
         return getBestSolution(finalFitness);
     }
-
-
-//    public static List<String> solveTSP(Graph graph, List<String> points) {
-//        List<List<String>> population = initializePopulation(points);
-//        Random random = new Random();
-//
-//        // Размер отобранной популяции
-//        int selectionSize = POPULATION_SIZE / 2;
-//
-//        for (int generation = 0; generation < GENERATIONS; generation++) {
-//            // Оценка приспособленности
-//            Map<List<String>, Integer> fitnessMap = evaluateFitness(graph, population);
-//
-//            // Селекция
-//            List<List<String>> populationRoutes = new ArrayList<>(population);
-//            List<List<String>> selectedPopulation = selectPopulation(populationRoutes, selectionSize);
-//
-//            // Кроссовер
-//            List<List<String>> nextGeneration = new ArrayList<>();
-//            while (nextGeneration.size() < POPULATION_SIZE) {
-//                List<String> parent1 = selectedPopulation.get(random.nextInt(selectedPopulation.size()));
-//                List<String> parent2 = selectedPopulation.get(random.nextInt(selectedPopulation.size()));
-//                nextGeneration.addAll(crossover(parent1, parent2));
-//            }
-//            // Мутация
-//            for (List<String> individual : nextGeneration) {
-//                if (random.nextDouble() < MUTATION_RATE) {
-//                    mutate(individual);
-//                }
-//            }
-//            population = nextGeneration;
-//        }
-//
-//        // Возврат лучшего решения
-//        Map<List<String>, Integer> finalFitness = evaluateFitness(graph, population);
-//        return getBestSolution(finalFitness);
-//    }
-
     private static List<List<String>> initializePopulation(List<String> points) {
         List<List<String>> population = new ArrayList<>();
         for (int i = 0; i < POPULATION_SIZE; i++) {
