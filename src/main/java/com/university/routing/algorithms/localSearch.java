@@ -1,6 +1,7 @@
 package com.university.routing.algorithms;
 
 import com.university.routing.models.Graph;
+
 import java.util.*;
 
 public class localSearch { // Локальный поиск
@@ -20,57 +21,70 @@ public class localSearch { // Локальный поиск
         }
         return path;
     }
+    public static List<String> applyLocalSearch(Graph graph, List<String> path) {
+        // Добавляем первую точку в конец пути, чтобы сделать его замкнутым
+        path.add(path.get(0));
 
-    // Метод проверки улучшения маршрута
-    private static boolean swapImprovesPath(Graph graph, List<String> path, int i, int j) {
-        String from = path.get(i - 1);
-        String to = path.get(j + 1);
+        // Оптимизация пути
+        List<String> optimizedPath = optimizePath(graph, path);
 
-        String currentI = path.get(i);
-        String currentJ = path.get(j);
+        // Убираем дублирующуюся последнюю точку, если нужно
+        optimizedPath.remove(optimizedPath.size() - 1);
 
-        int currentDistance = graph.getNeighbors(from).get(currentI) +
-                graph.getNeighbors(currentJ).get(to);
-        int swappedDistance = graph.getNeighbors(from).get(currentJ) +
-                graph.getNeighbors(currentI).get(to);
-
-        return swappedDistance < currentDistance;
+        return optimizedPath;
     }
+    public static boolean swapImprovesPath(Graph graph, List<String> path, int i, int j) {
+        // Проверяем граничные условия
+        if (i == j) {
+            return false; // Обмен с собой не имеет смысла
+        }
 
+        // Рассчитываем текущее расстояние
+        double currentDistance = calculateTotalDistance(graph, path);
 
+        // Меняем вершины i и j местами
+        Collections.swap(path, i, j);
 
-//    public static List<String> optimizeRoute(List<String> initialRoute, Map<String, Map<String, Double>> graph) {
-//        List<String> currentRoute = new ArrayList<>(initialRoute);
-//        double currentCost = calculateRouteCost(currentRoute, graph);
-//
-//        boolean improved;
-//        do {
-//            improved = false;
-//            for (int i = 1; i < currentRoute.size() - 1; i++) {
-//                for (int j = i + 1; j < currentRoute.size(); j++) {
-//                    // Генерация соседнего маршрута (путем перестановки точек)
-//                    List<String> newRoute = new ArrayList<>(currentRoute);
-//                    Collections.swap(newRoute, i, j);
-//
-//                    double newCost = calculateRouteCost(newRoute, graph);
-//                    if (newCost < currentCost) {
-//                        currentRoute = newRoute;
-//                        currentCost = newCost;
-//                        improved = true;
-//                    }
-//                }
-//            }
-//        } while (improved);
-//
-//        return currentRoute;
-//    }
-//
-//    private static double calculateRouteCost(List<String> route, Map<String, Map<String, Double>> graph) {
-//        double cost = 0.0;
-//        for (int i = 0; i < route.size() - 1; i++) {
-//            cost += graph.get(route.get(i)).get(route.get(i + 1));
-//        }
-//        return cost;
-//    }
+        // Рассчитываем расстояние после обмена
+        double newDistance = calculateTotalDistance(graph, path);
+
+        // Меняем вершины обратно, чтобы сохранить исходный путь
+        Collections.swap(path, i, j);
+
+        // Возвращаем true, если новый путь короче текущего
+        return newDistance < currentDistance;
+    }
+    private static double calculateTotalDistance(Graph graph, List<String> path) {
+        double totalDistance = 0.0;
+        for (int k = 0; k < path.size() - 1; k++) {
+            String from = path.get(k);
+            String to = path.get(k + 1);
+            totalDistance += graph.getDistance(from, to);
+        }
+        return totalDistance;
+    }
+    //    public static void printRoad(List<String> adress, Map<String, String> map, List<String> coordinates, Graph graph){
+    public static List<String> printRoad(List<String> adress, Map<String, String> map, List<String> coordinates, Graph graph) {
+        List<String> road = new ArrayList<>();
+        for (String coordinate : coordinates) {
+            String key;
+            for (Map.Entry<String, String> entry : map.entrySet()) {
+                if (entry.getValue().equals(coordinate)) {
+                    key = entry.getKey();
+//                    System.out.println(coordinate + " " + adress.indexOf(key) + " " + key);
+                    road.add(key);
+                }
+            }
+        }
+        int allDistance = 0; //общий адрес
+        for (int i = 1; i <= coordinates.size() - 1; i++) {
+            String currentPoint = coordinates.get(i);
+            String previousPoint = coordinates.get(i - 1);
+            System.out.println(graph.getAdjacencyList().get(previousPoint).get(currentPoint));
+            allDistance += graph.getAdjacencyList().get(previousPoint).get(currentPoint);
+        }
+        System.out.println("All road : " + allDistance);
+        return road;
+    }
 }
 
