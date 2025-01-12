@@ -1,6 +1,5 @@
 package com.university.routing.Map;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.BufferedReader;
@@ -35,7 +34,7 @@ private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
 //        Extracting the distance from the response
         if (!responseObject.getRows().isEmpty() && !responseObject.getRows().get(0).getElements().isEmpty()) {
-            System.out.println(response.toString());
+//            System.out.println(response.toString());
             return responseObject.getRows().get(0).getElements().get(0).getDistance().getValue();
         } else {
             throw new RuntimeException("Invalid response from Google Distance Matrix API");

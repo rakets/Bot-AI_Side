@@ -1,40 +1,27 @@
 package com.university.routing;
 
-import com.university.routing.Map.DistanceMatrixService;
-import com.university.routing.Map.GeocodingService;
+import com.university.routing.algorithms.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
-//        try {
-//            String coordinates = GeocodingService.getCoordinates("Campobasso, Italy, Centro del Molise");
-//            System.out.println("Coordinates: " + coordinates);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        // Список адресов
+        List<String> adressPoint = new ArrayList<>();
+        adressPoint.add("Campobasso, Italy, Via Campania, 17");
+        adressPoint.add("Campobasso, Italy, Veriaffari Campobasso");
+        adressPoint.add("Campobasso, Italy, Via San Giovanni Dei Gelsi, 37");
+        adressPoint.add("Campobasso, Italy, Direzione Regionale del Molise e Comando Provinciale di Campobasso dei Vigili del Fuoco");
+        adressPoint.add("Campobasso, Italy, Castello Monforte");
+        adressPoint.add("Campobasso, Italy, Museo dei Misterи");
+        adressPoint.add("Campobasso, Italy, Ristorante Pizzeria Villa dei Conti");
+        adressPoint.add("Campobasso, Italy, Pianeta Fiorito");
 
-        List<String> adress = new ArrayList<>();
-        adress.add("Campobasso, Italy, Centro del Molise");
-        adress.add("Campobasso, Italy, Veriaffari Campobasso");
-        System.out.println(adress);
+        System.out.println("Список адресов: " + adressPoint);
 
-        for (int i = 0; i <= adress.size()-1; i++){
-            try {
-            String coordinates = GeocodingService.getCoordinates(adress.get(i));
-            adress.set(i, coordinates);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println(adress);
+        UseAlgorithms road = new UseAlgorithms();
+//        road.genAlg(adressPoint);
+//        road.chooseAlgorithm(adressPoint);
 
-        try {
-            int distance = DistanceMatrixService.getDistance(adress.get(0), adress.get(1));
-            System.out.println("Distance (meters): " + distance);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        road.aStar(adressPoint, adressPoint.get(0), adressPoint.get(6));
     }
 }
