@@ -1,56 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.university</groupId>
     <artifactId>route-optimizer</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <!--    репозиторий Maven Central-->
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-    </repositories>
-
-
-    <dependencies>
-        <!-- JSON Parsing -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.15.2</version>
-        </dependency>
-
-<!--        &lt;!&ndash; OptaPlanner (Готовый инструмент для оптимизации маршрута) &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.optaplanner</groupId>-->
-<!--            <artifactId>optaplanner-core</artifactId>-->
-<!--            <version>8.40.0.Final</version>-->
-<!--        </dependency>-->
-
-        <!-- Зависимость для работы с Telegram API -->
-<!--        <dependency>-->
-<!--            <groupId>org.telegram</groupId>-->
-<!--            <artifactId>telegrambots</artifactId>-->
-<!--            <version>6.1.0</version>-->
-<!--        </dependency>-->
-
-    </dependencies>
-
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.4.1</version>
                 <executions>
@@ -74,10 +31,7 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
-                <!-- Maven Compiler Plugin -->
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
@@ -85,16 +39,12 @@
                     <target>17</target>
                 </configuration>
             </plugin>
-
             <plugin>
-                <!-- Make JAR file -->
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.4.2</version>
                 <configuration>
                     <archive>
                         <manifest>
-                            <!-- Указываем главный класс для запуска -->
                             <mainClass>com.university.routing.Main</mainClass>
                         </manifest>
                     </archive>
@@ -102,5 +52,15 @@
             </plugin>
         </plugins>
     </build>
-
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+    <properties>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 </project>
