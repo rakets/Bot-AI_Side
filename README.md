@@ -18,7 +18,6 @@ Integration with the Telegram bot is planned for the future; currently, the serv
 
 - Java 17
 - Google Cloud Maps API
-- Git
 - Docker (for containerization)
 
 ## Project Structure
