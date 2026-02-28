@@ -41,7 +41,7 @@ The project runs as a Java application. JDK 17 is required.
     ```bash
     cd Bot-AI_Side
     ```
-3.  **Add API google cloud token:**
+3.  **Add API google cloud maps token:**
     ```bash
     Create txt-file "API_token_cloud_google" and put token inside file.
     ```
