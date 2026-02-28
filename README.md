@@ -37,7 +37,22 @@ The project runs as a Java application. JDK 17 is required.
 - Algorithm optimization
 
 <p align="center">
-  <a href="./docs/pdf/project-1.pdf">📄 View Project 1</a><br>
-  <a href="./docs/pdf/project-2.pdf">📄 View Project 2</a><br>
-  <a href="./docs/pdf/project-3.pdf">📄 View Project 3</a>
+  <a href="./docs/pdf/project-1.png">
+    <img src="./docs/pdf/project-1.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-2.png">
+    <img src="./docs/pdf/project-2.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-3.png">
+    <img src="./docs/pdf/project-3.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-4.png">
+    <img src="./docs/pdf/project-4.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-5.png">
+    <img src="./docs/pdf/project-5.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-6.png">
+    <img src="./docs/pdf/project-6.png" width="600"/>
+  </a>
 </p>
