@@ -55,4 +55,52 @@ The project runs as a Java application. JDK 17 is required.
   <a href="./docs/pdf/project-6.png">
     <img src="./docs/pdf/project-6.png" width="600"/>
   </a>
+  <a href="./docs/pdf/project-7.png">
+    <img src="./docs/pdf/project-7.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-8.png">
+    <img src="./docs/pdf/project-8.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-9.png">
+    <img src="./docs/pdf/project-9.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-10.png">
+    <img src="./docs/pdf/project-10.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-11.png">
+    <img src="./docs/pdf/project-11.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-12.png">
+    <img src="./docs/pdf/project-12.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-13.png">
+    <img src="./docs/pdf/project-13.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-14.png">
+    <img src="./docs/pdf/project-14.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-15.png">
+    <img src="./docs/pdf/project-15.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-16.png">
+    <img src="./docs/pdf/project-16.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-17.png">
+    <img src="./docs/pdf/project-17.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-18.png">
+    <img src="./docs/pdf/project-18.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-19.png">
+    <img src="./docs/pdf/project-19.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-20.png">
+    <img src="./docs/pdf/project-20.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-21.png">
+    <img src="./docs/pdf/project-21.png" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-22.png">
+    <img src="./docs/pdf/project-22.png" width="600"/>
+  </a>
 </p>
