@@ -1,4 +1,4 @@
-# Bot AI-Side
+# A bot for finding the best way
 
 ## Description
 
@@ -36,3 +36,23 @@ The project runs as a Java application. JDK 17 is required.
 - Integration with the Telegram bot for two-way communication ( https://github.com/sierjo/Bot-TelegramSide )
 - Algorithm optimization
 
+<p align="center">
+  <a href="./docs/pdf/project-1.pdf">
+    <img src="./docs/pdf/project-1.pdf" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-2.pdf">
+    <img src="./docs/pdf/project-2.pdf" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-3.pdf">
+    <img src="./docs/pdf/project-3.pdf" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-4.pdf">
+    <img src="./docs/pdf/project-4.pdf" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-5.pdf">
+    <img src="./docs/pdf/project-5.pdf" width="600"/>
+  </a>
+  <a href="./docs/pdf/project-6.pdf">
+    <img src="./docs/pdf/project-6.pdf" width="600"/>
+  </a>
+</p>
